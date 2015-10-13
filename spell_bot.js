@@ -7,7 +7,11 @@ slack = new Slack(botToken, true, true)
 
 slack.on('open', function(){
 	console.log(`Connected to ${slack.team.name}`)
+	for (channel in slack.channels) {
+		slack.getChannelGroupOrDMByID(channel).send("With a POOF I've arrived")
+	}
 })
+
 
 slack.on('message', function(message){
 	request('https://spell-buddy.herokuapp.com/api/spell_names', function(err, response, body){
