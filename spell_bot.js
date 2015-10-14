@@ -25,7 +25,7 @@ slack.on('message', function(message){
 						var spell = JSON.parse(body)[0]
 						var helper = new SpellHelpers(spell)
 
-						channel.send(`\`\`\`${spell.name}\n Levels" ${spell.spell_level} \n School: ${spell.school} \t ${helper.subschool()} \t ${helper.descriptor()} \n Save: ${spell.saving_throw} \t Spell Resistance: ${spell.spell_resistence} \n Casting Time: ${spell.casting_time} \t Duration: ${spell.duration} Components: ${spell.components} \n Range: ${spell.range} \t ${helper.areaOrTargets()} \n \n ${spell.description} \`\`\``)
+						channel.send(`\`\`\`${spell.name}\n Levels: ${spell.spell_level} \n School: ${spell.school} \t ${helper.subschool()} \t ${helper.descriptor()} \n Save: ${spell.saving_throw} \t Spell Resistance: ${spell.spell_resistence} \n Casting Time: ${spell.casting_time} \t Duration: ${spell.duration} Components: ${spell.components} \n Range: ${spell.range} \t ${helper.areaOrTargets()} \n \n ${spell.description} \`\`\``)
 					})
 				}
 			
