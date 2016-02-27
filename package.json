@@ -4,8 +4,11 @@
   "description": "",
   "main": "spell_bot.js",
   "dependencies": {
-    "slack-client": "^1.4.1",
-    "request": "^2.65.0"
+    "request": "^2.65.0",
+    "slack-client": "^2.0.2",
+    "tough-cookie": "^2.2.1",
+    "underscore": "^1.8.3",
+    "ws": "^0.8.1"
   },
   "devDependencies": {},
   "scripts": {
